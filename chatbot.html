@@ -50,7 +50,7 @@
 
         function App() {
 
-            const ChatMessages = [{
+            const chatMessages = [{
                 message: 'Hello Chatbot',
                 sender: 'user'
             }, {
@@ -67,10 +67,10 @@
             return (
                 <>
                     <ChatInput />
-                    {ChatMessages.map((ChatMessage) => {
+                    {chatMessages.map((chatMessage) => {
                         return (
                             <ChatMessage 
-                                message={ChatMessage.message}
+                                message={chatMessage.message}
                                 sender={chatMessage.sender}
                             />
                         );
