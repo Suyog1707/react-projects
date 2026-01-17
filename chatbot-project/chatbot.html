@@ -54,6 +54,8 @@
                 
                 if (event.key === 'Enter') {
                     sendMessage();
+                } else if (event.key === 'Escape') {
+                     setInputText('');
                 }
 
             }
@@ -64,7 +66,7 @@
                         placeholder="Send a message to Chatbot"
                         size="50" 
                         onChange={saveInputText}
-                        onKeyUp={handleKeyDown}
+                        onKeyDown={handleKeyDown}
                         value={inputText}
                     />
                     <button onClick={sendMessage}>
