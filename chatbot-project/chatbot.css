@@ -10,7 +10,6 @@ body {
   padding: 0;
 }
 
-/* Main container */
 .js-container {
   max-width: 600px;
   margin: 40px auto;
@@ -20,14 +19,12 @@ body {
   padding: 20px;
 }
 
-/* Input area */
 center {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-/* Text input */
 .chatbox {
   flex: 1;
   padding: 12px 15px;
@@ -41,7 +38,6 @@ center {
   border-color: #4a90e2;
 }
 
-/* Send button */
 .send-button {
   padding: 12px 20px;
   border-radius: 25px;
@@ -74,7 +70,6 @@ center {
     0 0 15px rgba(74, 144, 226, 0.3);
 }
 
-/* Chat messages container */
 .input-message,
 .reply-message {
   display: flex;
@@ -84,12 +79,11 @@ center {
   max-width: 85%;
 }
 
-/* User message */
 .input-message {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-left: auto;        /* pushes message to extreme right */
+  margin-left: auto;        
   width: fit-content;
   max-width: 80%;
 
@@ -99,12 +93,11 @@ center {
   border-radius: 18px 18px 4px 18px;
 }
 
-/* Robot message */
 .reply-message {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-right: auto;       /* pushes message to extreme left */
+  margin-right: auto;      
   width: fit-content;
   max-width: 80%;
 
@@ -114,13 +107,11 @@ center {
   border-radius: 18px 18px 18px 4px;
 }
 
-/* Message images */
 .input-message img,
 .reply-message img {
   border-radius: 50%;
 }
 
-/* Smooth appearance */
 .input-message,
 .reply-message {
   animation: fadeIn 0.3s ease-in-out;
