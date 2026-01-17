@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Chatbot</title>
+    <link rel="stylesheet" href="chatbot.css"></link>
   </head>
   <body>
     <div class="js-container"></div>
@@ -73,33 +74,49 @@
 
             return (
                 <>
-                    <input
-                        placeholder="Send a message to Chatbot"
-                        size="50" 
-                        onChange={saveInputText}
-                        onKeyDown={handleKeyDown}
-                        value={inputText}
-                    />
-                    <button onClick={sendMessage}>
-                        Send
-                    </button>
+                    <center >
+                        <input
+                            placeholder="Send a message to Chatbot"
+                            size="50" 
+                            onChange={saveInputText}
+                            onKeyDown={handleKeyDown}
+                            value={inputText}
+                            className="chatbox"
+                        />
+                        <button 
+                            className="send-button"
+                            onClick={sendMessage}
+                        >
+                            Send
+                        </button>
+                    </center>
                 </>
             );
         };
 
         function ChatMessage({ message, sender }) {
+
+            if (sender === 'robot') {
+                return (
+                    <>
+                        <div className="reply-message">
+                            <img src="images/robot.png" width="45" />
+                            {message}
+                        </div>
+                    </>
+                );
+            } else {
+                return (
+                    <>
+                        <div className="input-message">
+                            {message}
+                            <img src="images/user.png" width="45" />
+                        </div>
+                    </>
+                );
+            }
            
-            return (
-                <div>
-                    {sender ==='robot' && (
-                        <img src="images/robot.png" width="45" />
-                    )}
-                    {message}
-                    {sender ==='user' && (
-                        <img src="images/user.png" width="45" />
-                    )}
-                </div>
-            );   
+              
         }
 
         function ChatMessages({chatMessages, setChatMessages}) {
