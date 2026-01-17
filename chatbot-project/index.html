@@ -145,11 +145,13 @@
 
                return (
                 <>
-                    <ChatInput
-                        chatMessages={chatMessages}
-                        setChatMessages={setChatMessages}
-                    />
-                    <ChatMessages
+                    <div className="messages-container">
+                        <ChatMessages
+                            chatMessages={chatMessages}
+                            setChatMessages={setChatMessages}
+                        />
+                    </div>
+                     <ChatInput
                         chatMessages={chatMessages}
                         setChatMessages={setChatMessages}
                     />
