@@ -96,27 +96,22 @@
 
         function ChatMessage({ message, sender }) {
 
-            if (sender === 'robot') {
-                return (
-                    <>
-                        <div className="reply-message">
-                            <img src="images/robot.png" width="45" />
-                            {message}
-                        </div>
-                    </>
-                );
-            } else {
-                return (
-                    <>
-                        <div className="input-message">
-                            {message}
-                            <img src="images/user.png" width="45" />
-                        </div>
-                    </>
-                );
-            }
+            return (
+                <div className='messages'>
+                    {
+                        sender === 'robot'
+                        ?   <div className="reply-message">
+                                <img src="images/robot.png" width="45" />
+                                {message}
+                            </div>
+                        :   <div className="input-message">
+                                {message}
+                                <img src="images/user.png" width="45" />
+                            </div>
+                    }
+                </div>
+            );
            
-              
         }
 
         function ChatMessages({chatMessages, setChatMessages}) {
@@ -144,16 +139,16 @@
             const [chatMessages, setChatMessages] = React.useState([])
 
                return (
-                <>
-                     <ChatInput
-                        chatMessages={chatMessages}
-                        setChatMessages={setChatMessages}
-                    />
+                <div className="app-container">
                     <ChatMessages
                         chatMessages={chatMessages}
                         setChatMessages={setChatMessages}
                     />
-                </>
+                     <ChatInput
+                        chatMessages={chatMessages}
+                        setChatMessages={setChatMessages}
+                    />
+                </div>
             );
         }
       
