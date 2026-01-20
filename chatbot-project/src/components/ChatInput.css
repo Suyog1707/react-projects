@@ -1,0 +1,53 @@
+.chatbox {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+.chatbox:focus {
+  border-color: #4a90e2;
+}
+
+center {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-self: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.send-button {
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #000000;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow:
+    0 0 5px rgba(74, 144, 226, 0.6),
+    0 0 15px rgba(74, 144, 226, 0.4),
+    0 0 30px rgba(74, 144, 226, 0.25);
+}
+
+.send-button:hover {
+  background: #000000;
+  box-shadow:
+    0 0 10px rgba(74, 144, 226, 0.9),
+    0 0 25px rgba(74, 144, 226, 0.6),
+    0 0 45px rgba(74, 144, 226, 0.4);
+  transform: scale(1.05);
+}
+
+.send-button:active {
+  transform: scale(0.96);
+  transform: scale(0.95);
+  box-shadow:
+    0 0 5px rgba(74, 144, 226, 0.6),
+    0 0 15px rgba(74, 144, 226, 0.3);
+}

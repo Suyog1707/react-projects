@@ -1,0 +1,49 @@
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.input-message,
+.reply-message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+  max-width: 85%;
+}
+
+.input-message {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;        
+  width: fit-content;
+  max-width: 80%;
+  background: #444444;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 18px 18px 4px 18px;
+}
+
+.reply-message {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: auto;      
+  width: fit-content;
+  max-width: 80%;
+  background: #e0e0e0;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 18px 18px 18px 4px;
+}
+
+.input-message img,
+.reply-message img {
+  border-radius: 50%;
+}
+
+.input-message,
+.reply-message {
+  animation: fadeIn 0.3s ease-in-out;
+}
