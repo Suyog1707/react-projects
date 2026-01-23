@@ -9,6 +9,7 @@ function ChatMessages({chatMessages}) {
                     <ChatMessage 
                         message={chatMessage.message}
                         sender={chatMessage.sender}
+                        Time={chatMessage.Time}
                         key={chatMessage.id}
                         
                     />

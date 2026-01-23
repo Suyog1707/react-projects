@@ -47,3 +47,12 @@
 .reply-message {
   animation: fadeIn 0.3s ease-in-out;
 }
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-small;
+  align-self: end;
+  justify-self: start;
+}
